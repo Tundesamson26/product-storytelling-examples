@@ -86,8 +86,8 @@ export default function App() {
       </head>
       <body>
         <QueryClientProvider client={queryClient}>
-          <BasketProvider locale={locale}>
-            <Layout>
+          <BasketProvider locale={locale} children={undefined}>
+            <Layout children={undefined}>
               <Outlet />
               <script
                 dangerouslySetInnerHTML={{
@@ -179,7 +179,7 @@ export function ErrorBoundary() {
         <Links />
       </head>
       <body style={{ height: "100vh" }}>
-        <Layout>
+        <Layout children={undefined}>
           <ErrorComponent />
         </Layout>
         <Scripts />
@@ -197,7 +197,7 @@ export function CatchBoundary() {
         <Links />
       </head>
       <body style={{ height: "100vh" }}>
-        <Layout>
+        <Layout children={undefined}>
           <ErrorComponent />
         </Layout>
         <Scripts />

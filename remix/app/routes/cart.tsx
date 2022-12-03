@@ -1,6 +1,7 @@
 import { useBasket } from "../components/basket";
 import { Link } from "remix";
 import { ItemSortField } from "~/crystallize/types.generated";
+import { Client, Account, Databases, Query } from "appwrite";
 
 export default function Cart() {
   let basket = useBasket();
@@ -11,6 +12,26 @@ export default function Cart() {
       </div>
     );
   }
+
+  const handleSubmit = () => {
+    const client = new Client();
+    client
+      .setEndpoint("http://localhost/v1") // Your Appwrite Endpoint
+      .setProject("6386be1b38722a42059a");
+    const account = new Account(client);
+    const database = new Databases(client);
+
+    account.createAnonymousSession().then(
+      (response) => {
+        console.log(response, basket);
+        
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  };
+
   return (
     <div className="py-20 text-text w-auth mx-auto">
       <h1 className="text-4xl font-bold  mb-10">
@@ -44,8 +65,9 @@ export default function Cart() {
         <Link
           to="/checkout"
           className="bg-text text-primary py-3 mt-10 rounded font-semibold text-center"
+          onClick ={handleSubmit}
         >
-          Go to Checkout
+          Checkout
         </Link>
       </div>
     </div>

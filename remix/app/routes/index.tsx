@@ -10,8 +10,28 @@ import { GridItem } from "../components/grid-item";
 import { Products } from "../components/products";
 import { componentContent } from "../crystallize/utils/componentContent";
 import { HttpCacheHeaderTagger } from "~/http-cache-header-tagger";
+import { Client, Account, Databases, Query } from "appwrite";
+
 
 export let loader: LoaderFunction = async ({ request }) => {
+
+  const client = new Client();
+client
+  .setEndpoint("http://localhost/v1") // Your Appwrite Endpoint
+  .setProject("6386be1b38722a42059a");
+
+const account = new Account(client);
+const database = new Databases(client);
+
+account.createAnonymousSession().then(
+  (response) => {
+    console.log(response);
+  },
+  (error) => {
+    console.log(error);
+  }
+);
+
   const url = new URL(request.url);
   // for the preview mode, if the query parameter preview=true is present, ask for the draft version
   const preview = url.searchParams.get("preview");
