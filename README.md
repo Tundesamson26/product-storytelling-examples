@@ -118,6 +118,4 @@ Lastly, to deploy the application, all you need to do is run:
 ```bash
 npm run deploy
 ```
-## Next Step: Service API
 
-In order to manage a fully operational conference website, you need to manage basket validation, payments and such. For that, we have prepared a boilerplate for you, the [Service API boilerplate](https://crystallize.com/learn/open-source/boilerplates/service-api), which you would want to add alongside your project. Follow [our guide](https://crystallize.com/learn/open-source/boilerplates/service-api) for how to set it up.
