@@ -1,4 +1,4 @@
 import { hydrate } from "react-dom";
-import { RemixBrowser } from "remix";
+const { RemixBrowser } = require("@remix-run/react");
 
 hydrate(<RemixBrowser />, document);

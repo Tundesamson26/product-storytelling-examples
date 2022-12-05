@@ -1,5 +1,5 @@
 import { useBasket } from "../components/basket";
-import { Form } from "remix";
+import { Form } from "@remix-run/react";
 import { Payments } from "../components/payments";
 import { useState } from "react";
 import { CheckoutModelInput } from "../service-api/types.generated";

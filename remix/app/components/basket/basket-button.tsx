@@ -1,5 +1,5 @@
 import { useBasket } from "./index";
-import { Link } from "remix";
+import { Link } from "@remix-run/react";
 
 export const BasketButton = () => {
 

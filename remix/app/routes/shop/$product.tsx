@@ -1,4 +1,8 @@
-import { useLoaderData, json, LoaderFunction, MetaFunction } from "remix";
+import {
+  useLoaderData,
+} from "@remix-run/react";
+import { json } from "@remix-run/node";
+import type { LoaderFunction,  MetaFunction } from "@remix-run/node";
 import { catalogueClient } from "../../clients";
 import {
   ProductDocument,

@@ -20,7 +20,7 @@ import {
 } from "../../service-api/stripe-confirm-order.generated";
 import { StripeLoader } from "../stripe-loader";
 import { PaymentProps } from "./types";
-import { Form, useSubmit } from "remix";
+import { Form, useSubmit } from "@remix-run/react";
 
 
 interface FormProps extends PaymentProps {

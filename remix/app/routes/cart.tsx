@@ -1,5 +1,5 @@
 import { useBasket } from "../components/basket";
-import { Link } from "remix";
+import { Link } from "@remix-run/react";
 import { ItemSortField } from "~/crystallize/types.generated";
 import { Client, Account, Databases, Query } from "appwrite";
 

@@ -1,5 +1,5 @@
 import { Image } from "@crystallize/react-image";
-import { Link } from "remix";
+import { Link } from "@remix-run/react";
 
 export const GridItem = ({ cell }) => {
 

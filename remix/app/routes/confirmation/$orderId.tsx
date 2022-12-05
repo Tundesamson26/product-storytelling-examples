@@ -4,7 +4,8 @@ import {
   GetOrderQuery,
   GetOrderQueryVariables,
 } from "../../service-api/get-order.generated";
-import { LoaderFunction, useLoaderData } from "remix";
+import { LoaderFunction } from "@remix-run/router";
+import { useLoaderData } from "@remix-run/react";
 import Confirmation from "../../components/confirmation";
 
 export const loader: LoaderFunction = async ({ params }) => {
